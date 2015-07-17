@@ -1,30 +1,14 @@
 ---
 homebrew_installed_packages:
-  - ant
-  - autojump
-  - datomic
-  - elasticsearch
-  - go
+  - nvm
+  - jenv
   - groovy
   - gradle
-  - heroku-toolbelt
   - jq
-  - redis
-  - leiningen
-  - maven
-  - mercurial
-  - mongodb
-  - mysql
-  - nginx
-  - node
-  - postgresql
-  - rabbitmq
-  - siege
-  - tomcat
-  - tree
-  - wget
-  - zeromq
   - zsh
+  - ccat
+  - bash-completion
+  - pgcli
 
 homebrew_taps:
   - caskroom/cask
@@ -34,34 +18,22 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - appcleaner
+  - virtualbox
   - boot2docker
-  - caffeine
-  - consul
-  - charles
-  - divvy
-  - dropbox
-  - firefox
-  - flux
-  - go-server
-  - go-agent
-  - google-chrome
-  - intellij-idea
+  - hipchat
   - iterm2
   - java
-  - packer
   - skype
   - slack
-  - spotify
-  - sublime-text
-  - terraform
-  - vagrant
-  - virtualbox
-  - vlc
-  - xquartz
-  - wireshark
+  - sublime-text3
+  - idea
+  - intellij-idea        
+
+ruby_gems:
+  - sass
+  - compass
+  - git-up
 
 npm_packages:
-   - bower
-   - gulp
-   - grunt-cli
+  - bower
+  - grunt-cli

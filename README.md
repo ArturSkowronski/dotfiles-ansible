@@ -1,8 +1,6 @@
-instamac
+SmartMac ;)
 ========
 
-instant macbook provisioning  
+Fully opinionated set of tools for our installation. 
 
-Inspired by:  
-* http://il.luminat.us/blog/2014/04/19/how-i-fully-automated-os-x-with-ansible/  
-* https://github.com/geerlingguy/mac-dev-playbook  
+Inspired by (and based on) kwasniew/instamac.
