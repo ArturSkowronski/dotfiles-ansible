@@ -1,24 +1,29 @@
 ---
 homebrew_installed_packages:
 
-# Git
+#Git
   - git
-  - git-flow
-  - git-open
+  - git-flow    
+  - git-open    
   - git-ignore
   - legit
 
 # Server
-  - heroku-toolbelt		
+  - heroku-toolbelt   
 
 # DevOps
   - ansible
   - docker
+  - zookeeper
+  - mesos
   - dock
 
-# ODBC
-  - freetds
-  - unixodbc
+#ODBC
+  # - freetds
+  # - unixodbc
+
+#GO
+  - go
 
 #Scala
   - scala
@@ -44,7 +49,7 @@ homebrew_installed_packages:
   - leiningen
 
 #Haskell
-  - ghc 
+  - ghc
   - cabal-install
 
 #DB
@@ -54,8 +59,8 @@ homebrew_installed_packages:
 
 #Tools
   - highlight
-  - imagemagick 
-  - trash 
+  - imagemagick
+  - s3cmd
   - ttyrec
   - ffmpeg
   - https://raw.githubusercontent.com/icholy/ttygif/master/ttygif.rb

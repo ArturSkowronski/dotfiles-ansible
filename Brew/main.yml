@@ -5,5 +5,7 @@ homebrew_taps:
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
+  - imwithye/formula
+  - bripkens/dock
 
 homebrew_cask_appdir: /Applications
