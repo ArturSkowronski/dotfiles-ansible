@@ -2,7 +2,7 @@
 
 set -e
 
-ANSIBLE_CONFIGURATION_DIRECTORY="$HOME/.ansible.d"
+ANSIBLE_CONFIGURATION_DIRECTORY="./"
 
 # Download and install Command Line Tools with a checking heuristic
 if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]]; then
