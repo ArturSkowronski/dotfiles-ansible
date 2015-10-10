@@ -1,0 +1,30 @@
+---
+npm_packages:
+
+#Build Process
+ - grunt-cli
+
+#istanbul-harmony
+#istanbul-traceur
+
+#Tests
+ - karma
+ - karma-coverage
+ - mocha
+ - mocha-traceur
+
+#ES6
+ - babel
+ - regenerator
+ - traceur
+
+#Tools
+ - eslint
+ - nodemon
+ - express
+ - bower
+ - http-server
+
+#Yo
+ - yo
+ - generator-flux-webapp

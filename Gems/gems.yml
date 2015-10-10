@@ -1,0 +1,5 @@
+---
+ruby_gems:
+  - sass
+  - compass
+  - git-up

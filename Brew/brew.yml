@@ -1,0 +1,61 @@
+---
+homebrew_installed_packages:
+
+# Git
+  - git
+  - git-flow
+  - git-open
+  - git-ignore
+  - legit
+
+# Server
+  - heroku-toolbelt		
+
+# DevOps
+  - ansible
+  - docker
+  - dock
+
+# ODBC
+  - freetds
+  - unixodbc
+
+#Scala
+  - scala
+  - typesafe-activator
+  - sbt
+  - scalaenv
+
+#Shell
+  - zsh
+  - ccat
+  - bash-completion
+  - mackup
+  - wget
+  - fswatch
+  - thefuck
+
+#Java
+  - jenv
+  - maven
+  - tomcat7
+
+#Clojure
+  - leiningen
+
+#Haskell
+  - ghc 
+  - cabal-install
+
+#DB
+  - postgresql
+  - mongodb
+  - pgcli
+
+#Tools
+  - highlight
+  - imagemagick 
+  - trash 
+  - ttyrec
+  - ffmpeg
+  - https://raw.githubusercontent.com/icholy/ttygif/master/ttygif.rb
