@@ -2,6 +2,13 @@
 
 set -e
 
+if [ "$1" != "-f" ]; then
+  echo "yes"
+fi
+
+git add *
+git commit -m "New Version"
+
 # Download and install Command Line Tools with a checking heuristic
 if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]]; then
     echo "Info   | Install   | xcode"
