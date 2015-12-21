@@ -1,16 +1,12 @@
 ---
 homebrew_cask_apps:
 
-#install caskroom/cask/brew-cask
-#tap caskroom/versions
-
 #Media
   - chromecast   
   - vlc      
   - deezer   
 
 #Terminal
-  - totalterminal        
   - iterm2        
 
 #IDE
