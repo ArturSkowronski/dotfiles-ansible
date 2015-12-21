@@ -1,5 +1,5 @@
 ---
 sdkman_script_install_url: http://get.sdkman.io
-sdkman_folder: '/home/.sdkman'
+sdkman_folder: '/Users/arturskowronski/.sdkman'
 gradle_version: 2.9
-user_home_path: '~/'
+user_home_path: '/Users/arturskowronski/'
