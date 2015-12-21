@@ -4,6 +4,11 @@
   connection: local
 
   vars_files:
+    - Brew/brew.yml
+    - Brew/cask.yml
+    - Brew/main.yml
+    - Gems/gems.yml
+    - Node/node.yml
     - vars/main.yml
 
   tasks:

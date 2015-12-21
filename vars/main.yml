@@ -1,0 +1,4 @@
+---
+sdkman_script_install_url: http://get.sdkman.io
+sdkman_folder: '/home/.sdkman'
+gradle_version: 2.9
