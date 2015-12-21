@@ -4,7 +4,7 @@ set -e
 
 if [ "$1" == "-f" ]; then
     git add *
-    git commit -m "New Version ${date}"
+    git commit -m "New Version $date"
 fi
 
 
