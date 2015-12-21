@@ -2,8 +2,6 @@
 
 set -e
 
-ANSIBLE_CONFIGURATION_DIRECTORY="./"
-
 # Download and install Command Line Tools with a checking heuristic
 if [[ $(/usr/bin/gcc 2>&1) =~ "no developer tools were found" ]] || [[ ! -x /usr/bin/gcc ]]; then
     echo "Info   | Install   | xcode"
@@ -38,12 +36,11 @@ if [[ ! -x /usr/local/bin/ansible ]]; then
     brew install ansible
 fi
 
-# Clone down the Ansible repo
-if [[ ! -d $ANSIBLE_CONFIGURATION_DIRECTORY ]]; then
-    git clone https://github.com/kwasniew/instamac.git $ANSIBLE_CONFIGURATION_DIRECTORY
-fi
-
-cd $ANSIBLE_CONFIGURATION_DIRECTORY
 git pull
 ansible-playbook main.yml --ask-sudo-pass
+
+ln -s `pwd`/shell ~/.shell
+ln -s `pwd`/rc/.zshrc ~/.zshrc
+ln -s `pwd`/rc/.zprezto ~/.zprezto
+legit install
 

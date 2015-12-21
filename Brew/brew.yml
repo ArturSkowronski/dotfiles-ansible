@@ -18,10 +18,6 @@ homebrew_installed_packages:
   - mesos
   - dock
 
-#ODBC
-  # - freetds
-  # - unixodbc
-
 #GO
   - go
 

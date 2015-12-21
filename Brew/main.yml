@@ -7,5 +7,6 @@ homebrew_taps:
   - homebrew/versions
   - imwithye/formula
   - bripkens/dock
+  - homebrew/boneyard
 
 homebrew_cask_appdir: /Applications

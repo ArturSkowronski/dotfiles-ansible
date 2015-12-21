@@ -1,0 +1,62 @@
+mkcd () {
+  dir="$*";
+  mkdir -p "$dir" && cd "$dir";
+}
+
+dls () {
+ echo `ls -l | grep "^d" | awk '{ print $9 }' | tr -d "/"`
+}
+
+dgrep() {
+    # A recursive, case-insensitive grep that excludes binary files
+    grep -iR "$@" * | grep -v "Binary"
+}
+
+#http://zwischenzugs.tk/index.php/2015/06/14/my-favourite-docker-tip/
+function basher() {
+    if [[ $1 = 'run' ]]
+    then
+        shift
+        /usr/bin/docker run -e 
+            HIST_FILE=/root/.bash_history 
+            -v $HOME/.bash_history:/root/.bash_history 
+            "$@"
+    else
+        /usr/bin/docker "$@"
+    fi
+}
+
+function setjdk() {
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+ }
+
+ function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+ }
+
+
+function docker-srmachine() {
+    if [[ $1 = 'set' ]]
+    then
+        echo 'eval "$(docker-machine env '$2')"' >! ~/.shell/config/docker-machine
+    else
+        docker-machine "$@"
+    fi
+}
+
+function init() {
+    eval "$(scalaenv init -)"
+    eval "$(jenv init -)"
+    nvm use 4
+    [[ -s "/Users/arturskowronski/.gvm/bin/gvm-init.sh" ]] && source "/Users/arturskowronski/.gvm/bin/gvm-init.sh"
+}
+
+
+alias docker-machine=docker-srmachine

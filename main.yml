@@ -5,8 +5,37 @@
 
   vars_files:
     - vars/main.yml
+  sdkman_script_install_url: http://get.sdkman.io
+  sdkman_folder: '/home/.sdkman'
+  gradle_version: 2.9
 
   tasks:
+
+    - name: Creates directory
+      file: path=~/Priv state=directory
+
+    - name: Ensure presence of zshrc
+      file: state=touch path={{user_home_path}}/.bashrc
+      sudo: no
+
+    - name: Check if sdkman is installed
+      shell: test -d {{sdkman_folder}} && echo "yes" || echo "no"
+      register: is_sdkman_installed
+
+    - name: Install SDKMAN!
+      when: is_sdkman_installed.stdout == "no"
+      shell: curl -s {{sdkman_script_install_url}} | bash executable=/bin/bash
+      sudo: no
+
+    - name: Add sdkman in .zshrc
+      lineinfile: dest={{user_home_path}}/.zshrc regexp="\/.sdkman/bin\/sdkman\-init\.sh" line='[[ -s "{{sdkman_folder}}/bin/sdkman-init.sh" && ! $(which sdkman-init.sh) ]] && source "{{sdkman_folder}}/bin/sdkman-init.sh"'
+      sudo: no
+
+    - name: Installing gradle
+      # Yeah, I've not found other way yet
+      shell: source "{{sdkman_folder}}/bin/sdkman-init.sh" && sdk install gradle {{gradle_version}} executable=/bin/bash
+      sudo: no
+
     - name: Get list of installed homebrew packages.
       command: brew list
       register: homebrew_list
