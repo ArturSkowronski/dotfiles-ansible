@@ -2,7 +2,7 @@
 
 set -e
 
-if [ "$1" != "-f" ]; then
+if [ "$1" == "-f" ]; then
   echo "yes"
 fi
 
