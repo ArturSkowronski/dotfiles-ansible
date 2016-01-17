@@ -41,22 +41,17 @@ homebrew_cask_apps:
   - retinizer  
   - teamviewer       
   - karabiner      
-  - totalfinder        
   - todoist        
-  - simple-comic 
-  - bettertouchtool      
-  - xmind
+  - simple-comic       
   - steam  
   - evernote
   - utorrent
   - flashlight   
   - unified-remote
   - unrarx
-  - dropbox    
   - calibre      
   - cheatsheet
 
 #Communication
   - slack  
   - skype  
-  - mailbox
